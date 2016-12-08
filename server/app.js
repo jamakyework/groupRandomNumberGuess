@@ -5,6 +5,8 @@ var bodyParser = require('body-parser');
 var urlEncodedParser = bodyParser.urlencoded ({extended: false});
 var port = process.env.PORT || 8080;
 
+var playerGuessArray = [];
+
 
 app.listen (port, function (req,res){
   console.log( 'server is listening on', port);
@@ -18,7 +20,10 @@ app.get('/', function(req, res){
 
 app.post('/sendGuess', urlEncodedParser, function ( req, res){
   console.log('send guess url hit', req.body);
-  
+  var playerGuess = req.body;
+  playerGuessArray.push(playerGuess);
+  console.log(playerGuessArray);
+
 
 });//end post
 
