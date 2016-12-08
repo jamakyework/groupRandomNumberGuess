@@ -26,7 +26,6 @@ Play Mode
 
 if a guess is correct
 ---------------------
-
 * PROMINENTLY Display which player won (make 'em FEEL it)
 * restart button that leads to Setup Mode
 
