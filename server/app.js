@@ -18,14 +18,21 @@ app.get('/', function(req, res){
   res.sendFile(path.resolve('public/index.html'));
 });//end base url
 
+//base url
+app.get('/testGet', function(req, res){
+  console.log('base url hit');
+  res.send(playerGuessArray);
+});//end base url
+
 app.post('/sendGuess', urlEncodedParser, function ( req, res){
   console.log('send guess url hit', req.body);
   var playerGuess = req.body;
   playerGuessArray.push(playerGuess);
   console.log(playerGuessArray);
-
+  console.log("This is the number of guesses?:",playerGuessArray.length);
 
 });//end post
+
 
 //static folder
 app.use( express.static('public'));

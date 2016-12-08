@@ -21,9 +21,31 @@ $.ajax({
 });//end ajax call
 };// end post data function
 
+var getData = function(){
+  console.log("in get");
+  $.ajax({
+    type: "GET",
+    url: "/testGet",
+    success: function(response){
+      console.log('back from post call:', response);
+      console.log('from response lenght:', response.length);
+    $("#outputDiv").html("Total guesses:" + response.length);
+  },
+    error: function (){
+      console.log('error with ajax call...');
+    }
+  });//end ajax call
+};// end get data function
+
 $('#submitData').on('click', function (){
 console.log("in submit data click");
 postData();
+getData();
+
+$("#player1").val("");
+$("#player2").val("");
+$("#player3").val("");
+$("#player4").val("");
 
 });//end submit data
 
