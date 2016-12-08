@@ -30,6 +30,8 @@ var getData = function(){
       console.log('back from post call:', response);
       console.log('from response lenght:', response.length);
     $("#outputDiv").html("Total guesses:" + response.length);
+    for (var i = 0; i < response.length; i++) {
+      $("#outputDiv").html("Player Guesses:" + response[i])};
   },
     error: function (){
       console.log('error with ajax call...');

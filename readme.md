@@ -66,10 +66,12 @@ Play Mode
 ---------
 [x]* Input for a guess for each of the four Players
 [x]* submit guesses button
-[]* total guesses made indicator
+[X]* total guesses made indicator
 []* maximum number indicator
 []* details area for the last guess of each player (low/high)
 []* "abandon game" button that goes back to setup mode
+
+
 
 if a guess is correct
 ---------------------
