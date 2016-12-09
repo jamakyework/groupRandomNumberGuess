@@ -62,7 +62,7 @@ var getData = function(){
     var player2Response = response[response.length - 1].player2
     var player3Response = response[response.length - 1].player3
     var player4Response = response[response.length - 1].player4
-    console.log(player1.response);
+  
     if (player1Response === "Player 1 is correct!"){
       alert("Congrats! You win, Player 1!")
     } else if (player2Response === "Player 2 is correct!") {
