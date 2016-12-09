@@ -42,30 +42,31 @@ for (var i = 0; i < response.length; i++){
 $("#lastGuess1").html("Player 1 try again last guess was low");
 }
 else if (response[i].player1 > maximumNumber) {
-$("#lastGuess1").html("Player 1 try again last guess was high");
+$("#lastGuess1").html("Player 1 last guess was high");
 }
-  else if (response[i].player1 === maximumNumber){
-  alert("Perfect guess, you win !!!");
+   else //(response[i].player1 === maximumNumber)
+   {
+  // alert("Perfect guess, you win !!!");
   ("#lastGuess1").html("perfect guess, you win !!!");
 }
-if (response[i].player2 < maximumNumber) {
-$("#lastGuess2").html("Player 2 try again last guess was low");
-}
-else if (response[i].player2 > maximumNumber) {
-$("#lastGuess2").html("Player 2 try again last guess was high");
-}
-if (response[i].player3 < maximumNumber) {
-$("#lastGuess3").html("Player 3 try again last guess was low");
-}
-else if (response[i].player3 > maximumNumber) {
-$("#lastGuess3").html("Player 3 try again last guess was high");
-}
-if (response[i].player4 < maximumNumber) {
-$("#lastGuess4").html("Player 4 try again last guess was low");
-}
-else if (response[i].player4 > maximumNumber) {
-$("#lastGuess4").html("Plaer 4 try again last guess was high");
-}
+// if (response[i].player2 < maximumNumber) {
+// $("#lastGuess2").html("Player 2 try again last guess was low");
+// }
+// else if (response[i].player2 > maximumNumber) {
+// $("#lastGuess2").html("Player 2 try again last guess was high");
+// }
+// if (response[i].player3 < maximumNumber) {
+// $("#lastGuess3").html("Player 3 try again last guess was low");
+// }
+// else if (response[i].player3 > maximumNumber) {
+// $("#lastGuess3").html("Player 3 try again last guess was high");
+// }
+// if (response[i].player4 < maximumNumber) {
+// $("#lastGuess4").html("Player 4 try again last guess was low");
+// }
+// else if (response[i].player4 > maximumNumber) {
+// $("#lastGuess4").html("Plaer 4 try again last guess was high");
+// }
   $("#player1").val("");
   $("#player2").val("");
   $("#player3").val("");

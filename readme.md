@@ -59,21 +59,21 @@ To Do
 Setup Mode
 ----------
 Inputs on the web page:
-[]* Maximum Number selector (at least 3 options)
-[]* Start Game button
+[x]* Maximum Number selector (at least 3 options)
+[x]* Start Game button
 
 Play Mode
----------
+--------  -
 [x]* Input for a guess for each of the four Players
 [x]* submit guesses button
 [X]* total guesses made indicator
-[]* maximum number indicator
-[]* details area for the last guess of each player (low/high)
-[]* "abandon game" button that goes back to setup mode
+[x]* maximum number indicator
+[x]* details area for the last guess of each player (low/high)
+[x]* "abandon game" button that goes back to setup mode
 
 
 
 if a guess is correct
 ---------------------
-[]* PROMINENTLY Display which player won (make 'em FEEL it)
+[x]* PROMINENTLY Display which player won (make 'em FEEL it)
 []* restart button that leads to Setup Mode
