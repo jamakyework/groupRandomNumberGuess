@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8">
     <script src="jquery-3.1.1.js" charset="utf-8"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
     <script src="client.js" charset="utf-8"></script>
-    <script src="style.css" type="text/css" ></script>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -14,16 +13,19 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title> Random Number Guessing Game</title>
+
+  <title> Random Number Guessing Game</title>
   </head>
   <body>
-    <div class="container">
+  <div class= "header">
     <h1>  Random Number Guessing Game </h1>
+  </div>
+    <div class= "container" "content">
     <input type="number" id="player1" placeholder="Player 1 Guess" >
     <input type="number" id="player2" placeholder="Player 2 Guess" >
     <input type="number" id="player3" placeholder="Player 3 Guess" >
     <input type="number" id="player4" placeholder="Player 4 Guess" >
-    <button type="button" id="submitData" name="startButton">Start Game</button>
+    <button type="button" id="submitData" name="startButton" class="btn btn-success">Start Game</button>
     <div id= "outputDiv"></div>
     <div id="lastGuess1"></div>
     <div id="lastGuess2"></div>
