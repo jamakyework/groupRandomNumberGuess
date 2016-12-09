@@ -43,3 +43,7 @@ h3 {
         text-align: center !important;
         color: white !important;
 }
+
+#numberStyle {
+  color: black;
+}
