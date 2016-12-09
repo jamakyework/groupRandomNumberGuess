@@ -62,7 +62,7 @@ var getData = function(){
     var player2Response = response[response.length - 1].player2
     var player3Response = response[response.length - 1].player3
     var player4Response = response[response.length - 1].player4
-  
+
     if (player1Response === "Player 1 is correct!"){
       alert("Congrats! You win, Player 1!")
     } else if (player2Response === "Player 2 is correct!") {
@@ -115,6 +115,7 @@ $("#startGame").on('click', function (){
   $("#firstHeading").hide();
   $("#thirdHeading").hide();
   $("#submitMaxNumber").hide();
+  $("#pageHeader").show();
   showMaxNumber();
 });//end start game on click
 
@@ -122,6 +123,7 @@ $("#inputFields").hide();
 $("#submitData").hide();
 $("#secondHeading").hide();
 $("#abandonGameButton").hide();
+$("#pageHeader").hide();
 
 $("#abandonGameButton").on('click', function (){
   $("#inputFields").hide();
@@ -149,6 +151,5 @@ var showMaxNumber = function (){
   var maxNumberPlace = $('#secondHeading')
   maxNumberPlace.html("EACH PLAYER GUESS A NUMBER BUT NOT OVER THE MAXIMUM NUMBER..." + maxNumber);
 };
-
 
 });//end doc ready
