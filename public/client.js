@@ -1,5 +1,5 @@
 var maxNumber = $('#selectMaxNumber').val();
-
+var totalGuesses = 0;
 $(document).ready(function() {
   console.log("jquery is here");
 
@@ -52,7 +52,7 @@ var getData = function(){
     success: function(response){
       console.log('back from post call:', response);
       // console.log('from response lenght:', response.length);
-    $("#outputDiv").html("Total guesses:" + response.length);
+
     var player1 = $("#lastGuess1");
     var player2 = $("#lastGuess2");
     var player3 = $("#lastGuess3");
@@ -96,6 +96,8 @@ $('#submitData').on('click', function (){
   $("#player3").val("");
   $("#player4").val("");
 
+  totalGuesses++;
+  $("#outputDiv").html("Total guesses:" + totalGuesses);
 });//end submit data
 
 $('#submitMaxNumber').on('click', function (){
@@ -131,6 +133,14 @@ $("#abandonGameButton").on('click', function (){
   $("#firstHeading").show();
   $("#thirdHeading").show();
   $("#submitMaxNumber").show();
+  totalGuesses = 0;
+  $("#outputDiv").html("");
+  $("#lastGuess1").html("");
+  $("#lastGuess2").html("");
+  $("#lastGuess3").html("");
+  $("#lastGuess4").html("");
+
+
   //showMaxNumber();
 });//end abandonGameButton
 
@@ -139,5 +149,6 @@ var showMaxNumber = function (){
   var maxNumberPlace = $('#secondHeading')
   maxNumberPlace.html("EACH PLAYER GUESS A NUMBER BUT NOT OVER THE MAXIMUM NUMBER..." + maxNumber);
 };
+
 
 });//end doc ready
