@@ -1,5 +1,5 @@
 var maxNumber = $('#selectMaxNumber').val();
-
+var totalGuesses = 0;
 $(document).ready(function() {
   console.log("jquery is here");
 
@@ -52,7 +52,7 @@ var getData = function(){
     success: function(response){
       console.log('back from post call:', response);
       // console.log('from response lenght:', response.length);
-    $("#outputDiv").html("Total guesses:" + response.length);
+
     var player1 = $("#lastGuess1");
     var player2 = $("#lastGuess2");
     var player3 = $("#lastGuess3");
@@ -62,7 +62,7 @@ var getData = function(){
     var player2Response = response[response.length - 1].player2
     var player3Response = response[response.length - 1].player3
     var player4Response = response[response.length - 1].player4
-    console.log(player1.response);
+
     if (player1Response === "Player 1 is correct!"){
       alert("Congrats! You win, Player 1!")
     } else if (player2Response === "Player 2 is correct!") {
@@ -96,6 +96,8 @@ $('#submitData').on('click', function (){
   $("#player3").val("");
   $("#player4").val("");
 
+  totalGuesses++;
+  $("#outputDiv").html("Total guesses:" + totalGuesses);
 });//end submit data
 
 $('#submitMaxNumber').on('click', function (){
@@ -113,6 +115,7 @@ $("#startGame").on('click', function (){
   $("#firstHeading").hide();
   $("#thirdHeading").hide();
   $("#submitMaxNumber").hide();
+  $("#pageHeader").show();
   showMaxNumber();
 });//end start game on click
 
@@ -120,6 +123,7 @@ $("#inputFields").hide();
 $("#submitData").hide();
 $("#secondHeading").hide();
 $("#abandonGameButton").hide();
+$("#pageHeader").hide();
 
 $("#abandonGameButton").on('click', function (){
   $("#inputFields").hide();
@@ -131,6 +135,14 @@ $("#abandonGameButton").on('click', function (){
   $("#firstHeading").show();
   $("#thirdHeading").show();
   $("#submitMaxNumber").show();
+  totalGuesses = 0;
+  $("#outputDiv").html("");
+  $("#lastGuess1").html("");
+  $("#lastGuess2").html("");
+  $("#lastGuess3").html("");
+  $("#lastGuess4").html("");
+
+
   //showMaxNumber();
 });//end abandonGameButton
 

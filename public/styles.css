@@ -1,0 +1,49 @@
+.header {
+    height:50px auto !important;
+    background:#F0F0F0 auto!important;
+    border:1px solid #CCC auto !important;
+    width:960px auto!important;
+    margin:0px auto!important;
+}
+.content {
+    width:960px!important;
+    background: #F0F0F0!important;
+    border: 1px solid #CCC!important;
+    height: 2000px!important;
+    margin: 20px auto!important;
+}
+
+body {
+        background-image: url(http://img13.deviantart.net/1550/i/2011/353/4/2/mobile_game_background_by_disnie-d4jmr8r.jpg)!important;
+        background-repeat: no-repeat!important;
+        background-attachment: fixed!important;
+        background-position: auto!important;
+        background-size: cover!important;
+        text-align: center !important;
+}
+
+header {
+     position:fixed!important;
+     top: 0!important;
+     left: 0!important;
+     width: 100%!important;
+ }
+
+ h1 {
+         text-align: center !important;
+         color: white !important;
+}
+
+h2 {
+        text-align: center !important;
+        color: white !important;
+}
+
+h3 {
+        text-align: center !important;
+        color: white !important;
+}
+
+#numberStyle {
+  color: black;
+}
